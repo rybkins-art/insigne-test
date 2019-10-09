@@ -153,9 +153,34 @@
 .product-list {
     @include flex;
 
+    @media screen and (max-width: 1024px) {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 512px) {
+        max-width: 250px;
+    }
+
     &__item {
         &:not(:last-child) {
             margin-right: 20px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            width: calc(50% - 20px);
+            margin-right: 0 !important;
+
+            &:nth-child(2n) {
+                margin-left: 20px;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media screen and (max-width: 512px) {
+            width: 100%;
+            margin-left: 0 !important;
+            margin-bottom: 20px;
         }
     }
 }
@@ -170,6 +195,10 @@
 
         &:not(:last-child) {
             margin-right: 40px;
+
+            @media screen and (max-width: 1024px) {
+                margin-right: 20px;
+            }
         }
 
         .product {
@@ -180,6 +209,13 @@
 
         &--wide {
             flex-grow: 1;
+
+            @media screen and (max-width: 1024px) {
+                order: 1;
+                max-width: 400px;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
         }
     }
 }

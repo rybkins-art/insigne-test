@@ -52,5 +52,11 @@
                 transform: rotate(2deg);
             }
         }
+
+        &__caption {
+            @media screen and (max-width: 6000px) {
+                font-size: 14px;
+            }
+        }
     }
 }

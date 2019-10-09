@@ -10,6 +10,15 @@
             margin-right: 0;
         }
 
+        @media screen and (max-width: 750px) {
+            width: calc(100%);
+            margin-right: 0;
+            
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
         .news {
             @include flex(center, center, wrap);
             flex-direction: column;
@@ -57,6 +66,10 @@
             &--start {
                 background: url(../assets/images/gallery/12.jpg) no-repeat center;
                 background-size: 100%;
+
+                @media screen and (max-width: 1024px) {
+                    background-size: cover;
+                }
 
                 transition: all .5s ease-in;
 

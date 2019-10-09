@@ -15,10 +15,31 @@
     text-transform: uppercase;
     color: #000;
     display: inline-block;
+
+    @media screen and (max-width: 460px) {
+        font-size: 18px;
+        line-height: 1;
+    }
 }
 
 .site-nav {
     margin-left: 50px;
+
+    @media screen and (max-width: 960px) {
+        //display: none;
+        order: 3;
+        margin-top: 0;
+        max-height: 0px;
+        overflow: hidden;
+
+        transition: all .2s ease-in;
+    }
+
+    &.active {
+        display: block;
+        margin-top: 25px;
+        max-height: 100px;
+    }
 
     &__list {
         @include flex;
@@ -40,9 +61,55 @@
     }
 }
 
+.site-burger {
+    display: inline-block;
+    height: 14px;
+    width: 30px;
+    align-self: center;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+
+    @media screen and (max-width: 960px) {
+        display: block;
+    }
+
+    &::before,
+    &::after,
+    span {
+        content: '';
+        background: #000;
+        height: 2px;
+        width: 100%;
+        display: block;
+        transition: all .2s ease-in;
+    }
+
+    span {
+        margin: 4px 0;
+    }
+
+    &.active {
+        span {
+            opacity: 0;
+        }
+
+        &::before {
+            transform: rotate(-45deg) translateX(-8px)
+        }
+        &::after {
+            transform: rotate(45deg) translateX(-8px)
+        }
+    }
+}
+
 .header-box {
     position: relative;
     margin-left: auto;
+
+    @media screen and (max-width: 460px) {
+        font-size: 12px;
+    }
 
     &__btn {
         @include flex;
@@ -145,8 +212,13 @@
         width: 100%;
         height: 450px;
         background: {
-            size: contain;
+            size: cover;
+            position: center;
             repeat: no-repeat;
+        }
+
+        @media screen and (max-width: 900px) {
+            height: 340px;
         }
     }
 
@@ -160,11 +232,35 @@
         position: absolute;
         top: 100px;
         left: 40px;
+
+        @media screen and (max-width: 900px) {
+            top: 10%;
+            font-size: 32px;
+            max-width: 300px;
+        }
+        @media screen and (max-width: 600px) {
+            position: relative;
+            max-width: unset;
+            width: 80%;
+        }
     }
 
     &__desc {
         position: absolute;
         right: 25px;
-        top: 235px;
+        bottom: 110px;
+
+        @media screen and (max-width: 900px) {
+            top: 40%;
+            font-size: 18px;
+        }
+        @media screen and (max-width: 600px) {
+            position: relative;
+            bottom: unset;
+            right: unset;
+            top: unset;
+            margin-top: 45px;
+            margin-left: 40px;
+        }
     }
 }
