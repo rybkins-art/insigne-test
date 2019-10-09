@@ -1,0 +1,24 @@
+.childrens-section {
+    padding-bottom: 0;
+
+    .section--colored-blue {
+        margin-top: 50px;
+
+        .section__inner {
+            max-width: 215px;
+            margin-left: 20px;
+        }
+    
+        .section__header {
+            line-height: 0.9;
+            align-self: flex-start;
+        }
+    }
+
+    .text-hint {
+        color: #1565c0;
+        display: inline-block;
+        margin-top: auto;
+        margin-top: 100px;
+    }
+}

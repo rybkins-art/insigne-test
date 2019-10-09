@@ -1,0 +1,47 @@
+.section-history {
+    &__inner {
+        max-width: 270px;
+        position: relative;
+
+        &--wide {
+            flex-grow: 1;
+            max-width: calc(100% - 320px);
+            margin-right: 20px;
+        }
+    }
+
+    &__item {
+        max-width: calc(50% - 10px);
+        margin-top: 20px;
+
+        &:nth-child(2n) {
+            margin-left: 20px;
+        }
+    }
+
+    &__img {
+        display: block;
+        max-width: 100%;
+    }
+
+    &__text {
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
+    &__founder {
+        //position: absolute;
+        margin-left: auto;
+        width: 192px;
+        margin-top: -70px;
+        margin-bottom: 50px;
+    }
+
+    &__founder-text {
+        //margin-top: 110px;
+        font-size: 12px;
+        line-height: 0.9rem;
+        display: block;
+        font-weight: bold;
+    }
+}

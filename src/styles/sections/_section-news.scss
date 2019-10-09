@@ -1,0 +1,68 @@
+.news-list {
+    @include flex;
+
+    &__item {
+        position: relative;
+        width: calc(50% - 10px);
+        margin-right: 20px;
+        
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .news {
+            @include flex(center, center, wrap);
+            flex-direction: column;
+            margin-top: 0;
+
+            width: 100%;
+            height: 320px;
+            color: #FFF;
+
+            &--sale {
+                background: #970707;
+                font-weight: 300;
+
+                .news__title {
+                    @extend .text-underline;
+                    font-size: 24px;
+                    letter-spacing: 4px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    line-height: 1.6;
+                    margin-bottom: 10px;
+
+                    &::before {
+                        background: #FFF;
+                    }
+                }
+
+                .news__text {
+                    text-align: center;
+                    max-width: 195px;
+                }
+            }
+            &--start {
+                background: url(../assets/images/gallery/12.jpg) no-repeat center;
+
+                .news__title {
+                    margin: 64px 0 0;
+                    font-family: 'Bebas Neue';
+                    font-size: 38px;
+                    text-transform: uppercase;
+                    line-height: 1.6;
+                    font-weight: bold;
+
+                    &::before {
+                        background: #FFF;
+                    }
+                }
+
+                .news__text {
+                    margin-top: auto;
+                    margin-bottom: 21px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+.product {
+    display: inline-block;
+    width: 220px;
+
+    &__img {
+        width: 220px;
+        height: 220px;
+    }
+
+    &__footer {
+        position: relative;
+        margin-top: 20px;
+    }
+    &__title {
+        @include flex;
+        flex-direction: column;
+        text-decoration: none;
+    }
+    &__sex, 
+    &__label {
+        color: #000;
+        display: inline-block;
+        @extend .text-through;
+    }
+
+    &__price {
+        font-weight: bold;
+        position: absolute;
+        right: 20px;
+        top: -8px;
+    }
+}
+
+.product-advice {
+    width: 220px;
+    position: relative;
+
+    &__title {
+        color: #1565c0;
+        font-size: 44px;
+        font-weight: 800;
+        position: absolute;
+    }
+
+    &__icon {
+        display: inline-block;
+        width: 220px;
+        height: 220px;
+        border-radius: 100%;
+        background: #f1f7ff center no-repeat;
+
+        &--size {
+            background-image: url(../assets/images/icons/size.png);
+        }
+        &--heat {
+            background-image: url(../assets/images/icons/heat.png);
+        }
+        &--combo {
+            background-image: url(../assets/images/icons/combo.png);
+        }
+    }
+
+    &__text {
+        position: relative;
+        line-height: 1.25;
+        margin-top: -40px;
+    }
+}
+
+.product-list {
+    @include flex;
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+.product-grid {
+    @include flex(center, start);
+    margin-top: 50px;
+
+    &__col {
+        @include flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+
+        .product {
+            &:not(:last-child) {
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
