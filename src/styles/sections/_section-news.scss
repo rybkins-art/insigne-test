@@ -32,6 +32,8 @@
                     line-height: 1.6;
                     margin-bottom: 10px;
 
+                    transition: all .2s ease-in-out;
+
                     &::before {
                         background: #FFF;
                     }
@@ -41,9 +43,26 @@
                     text-align: center;
                     max-width: 195px;
                 }
+
+                &:hover {
+                    .news__title {
+                        &::before {
+                            opacity: 1;
+                            left: 30%;
+                            right: 30%;
+                        }
+                    }
+                }
             }
             &--start {
                 background: url(../assets/images/gallery/12.jpg) no-repeat center;
+                background-size: 100%;
+
+                transition: all .5s ease-in;
+
+                &:hover {
+                    background-size: 110%;
+                }
 
                 .news__title {
                     margin: 64px 0 0;
@@ -64,5 +83,9 @@
                 }
             }
         }
+    }
+
+    &__link {
+        text-decoration: none;
     }
 }

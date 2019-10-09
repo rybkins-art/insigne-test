@@ -18,9 +18,15 @@
     }
     &__sex, 
     &__label {
+        @extend .text-through;
+
         color: #000;
         display: inline-block;
-        @extend .text-through;
+        margin-right: 5px;
+
+        &:hover {
+            color: #4990e2;
+        }
     }
 
     &__price {
@@ -28,6 +34,83 @@
         position: absolute;
         right: 20px;
         top: -8px;
+    }
+
+    &--wide {
+        width: 100%;
+
+        .product__img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product__title {
+            flex-direction: row;
+        }
+    }
+
+    .image-block {
+        position: relative;
+
+        &:hover {
+            .product__overlay {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__overlay {
+        @include flex(center, center);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(21, 101, 192, 0.79);
+        border-radius: 5px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 9;
+
+        transition: all .2s ease-in-out;
+    }
+
+    &__add-box {
+        text-decoration: none;
+
+        &-icon {
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: url(../assets/images/shopping-bag.svg) no-repeat center;
+            background-size: contain;
+            margin: 0 auto;
+
+            transition: all .2s ease-in-out;
+        }
+        &-text {
+            text-decoration: none;
+            display: block;
+            margin-top: 7px;
+            color: #FFF;
+
+            &::before {
+                content: 'В корзину';
+                display: block;
+            }
+        }
+
+        &--added {
+            .product__add-box-icon {
+                background-image: url(../assets/images/shopping-bag-added.svg);
+                animation: add-box--added .5s cubic-bezier(0.6, -0.04, 0.13, 1.68);
+            }
+            .product__add-box-text {
+                &::before {
+                    content: 'В корзине';
+                }
+            }
+        }
     }
 }
 
@@ -94,5 +177,21 @@
                 margin-bottom: 60px;
             }
         }
+
+        &--wide {
+            flex-grow: 1;
+        }
+    }
+}
+
+@keyframes add-box--added {
+    from {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
     }
 }

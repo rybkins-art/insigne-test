@@ -25,10 +25,23 @@ header.site-header
                     a(href="#").site-nav__link
                         |О фабрике
 
-        a(href="#").header-box
-            i.header-box__icon
-            span.header-box__text
-                |2 товара / 6 350₽
+        .header-box
+            a(href="#").header-box__btn
+                i.header-box__icon
+                span.header-box__text
+                    |2 товара / 6 350₽
+
+            ul.header-box__list
+                li.header-box__item
+                    .header-box__product
+                        img(src="/assets/images/product/1.jpg", alt="Василёк-Спорт").header-box__product-img
+                        span.header-box__product-label Василёк-Спорт
+
+                        input(type="text").header-box__product-amount
+                        span.header-box__product-remove
+
+
+            
 
 .site-wrapper
     ul.hero-slider

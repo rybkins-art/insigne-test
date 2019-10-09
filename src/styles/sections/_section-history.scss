@@ -26,19 +26,18 @@
 
     &__text {
         font-size: 24px;
+        line-height: 1.25;
         margin-bottom: 0;
     }
 
     &__founder {
-        //position: absolute;
         margin-left: auto;
         width: 192px;
         margin-top: -70px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     &__founder-text {
-        //margin-top: 110px;
         font-size: 12px;
         line-height: 0.9rem;
         display: block;
