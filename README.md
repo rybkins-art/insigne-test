@@ -1,17 +1,29 @@
-# Тестовое задание Insigne
-Выполнить установку - npm i
+# insigne-test-spa
 
-## Команды:<br/>
+## Project setup
+```
+npm install
+```
 
-npm run dev - запуск сборки в dev режиме<br/>
-npm run build - запуск сборки в production режиме<br/>
-npm run watch - запуск сервера в dev режиме<br/>
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-## Директория src содержит исходники:<br/>
+### Compiles and minifies for production
+```
+npm run build
+```
 
--fonts - подключаемые шрифты <br/>
--images - изображения <br/>
--scripts - js -скрипты <br/>
--styles - sass стили <br/>
--template - pug шаблоны <br/>
-# insigne-test
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

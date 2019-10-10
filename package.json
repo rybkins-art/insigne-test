@@ -1,37 +1,23 @@
 {
-  "name": "valenok-ru",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "name": "insigne-test-spa",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "watch": "webpack-dev-server --mode development --open"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
   },
-  "author": "rybkin",
-  "license": "ISC",
   "dependencies": {
-    "imagemin-pngquant": "^5.0.1"
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.7.0",
-    "bemto.pug": "^2.1.0",
-    "bootstrap": "^4.0.0-beta",
-    "copy-webpack-plugin": "^4.6.0",
-    "css-loader": "^0.28.11",
-    "file-loader": "^2.0.0",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "jquery": "^3.4.1",
-    "mini-css-extract-plugin": "^0.4.0",
-    "node-sass": "^4.9.0",
-    "popper.js": "^1.15.0",
-    "pug-html-loader": "^1.1.5",
-    "sass-loader": "^7.0.2",
-    "webpack": "^4.10.2",
-    "webpack-cli": "^3.0.1",
-    "webpack-dev-server": "^3.1.4"
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass": "^1.18.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
   }
 }

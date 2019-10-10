@@ -1,10 +1,54 @@
 .product {
     display: inline-block;
     width: 220px;
+    position: relative;
+
+    &--new,
+    &--hit {
+        &::before {
+            content: 'Новинка!';
+            text-transform: uppercase;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: #4da0ff;
+            color: #FFF;
+            font-size: 11px;
+            line-height: 18px;
+            font-weight: bold;
+            padding: 0 8px;
+            z-index: 3;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -8px;
+            top: 9px;
+            border: 8px solid transparent;
+            border-left-color: #3a70af;
+            z-index: 2;
+        }
+    }
+
+    &--hit {
+        &::before {
+            content: 'Хит!';
+            text-align: right;
+            background: #ff9b4d;
+        }
+        &::after {
+            border-left-color: #b4550b;
+        }
+    }
 
     &__img {
         width: 220px;
         height: 220px;
+        position: relative;
+        z-index: 1;
     }
 
     &__footer {
@@ -16,7 +60,7 @@
         flex-direction: column;
         text-decoration: none;
     }
-    &__sex, 
+    &__gender, 
     &__label {
         @extend .text-through;
 
@@ -99,16 +143,16 @@
                 display: block;
             }
         }
+    }
 
-        &--added {
-            .product__add-box-icon {
-                background-image: url(../assets/images/shopping-bag-added.svg);
-                animation: add-box--added .5s cubic-bezier(0.6, -0.04, 0.13, 1.68);
-            }
-            .product__add-box-text {
-                &::before {
-                    content: 'В корзине';
-                }
+    &--added {
+        .product__add-box-icon {
+            background-image: url(../assets/images/shopping-bag-added.svg);
+            animation: add-box--added .5s cubic-bezier(0.6, -0.04, 0.13, 1.68);
+        }
+        .product__add-box-text {
+            &::before {
+                content: 'В корзине';
             }
         }
     }
@@ -215,6 +259,10 @@
                 max-width: 400px;
                 margin: 0 auto;
                 margin-top: 20px;
+            }
+
+            .image-block {
+                @extend .image-block--shaded;
             }
         }
     }
