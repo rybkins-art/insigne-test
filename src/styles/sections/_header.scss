@@ -1,7 +1,19 @@
 .site-header {
-    margin: 27px 0;
     position: relative;
-    z-index: 1;
+    background: #FFF;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 27px 0;
+    z-index: 99;
+
+    transition: all .2s ease .2s;
+
+    &--shaded {
+        box-shadow: 0 7px 7px rgba(0, 0, 0, .05);
+    }
 }
 
 .site-logo {

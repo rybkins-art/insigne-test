@@ -13,8 +13,6 @@ Vue.filter('number', function (x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 })
 
-
-
 new Vue({
   store,
   render: h => h(App)

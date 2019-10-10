@@ -117,6 +117,11 @@ export default {
     toggleBurgerMenu() {
         this.burgerActive = !this.burgerActive;
       }
+  },
+  mounted() {
+    window.addEventListener('scroll', function() {
+        document.querySelector('.site-header').classList.toggle('site-header--shaded', pageYOffset > 0);
+    });
   }
 }
 </script>
